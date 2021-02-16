@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/Station.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/Background.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Asteroid.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Turret.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="OpenSimplexNoise" id=2]
+
+[sub_resource type="NoiseTexture" id=3]
+seamless = true
+noise = SubResource( 2 )
+
+[node name="Main" type="Node2D"]
+position = Vector2( 293.997, 139.871 )
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="Stars" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sprite" type="Sprite" parent="Background/Stars"]
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[node name="Dust" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2( 0.75, 0.75 )
+motion_mirroring = Vector2( 1920, 1080 )
+
+[node name="Sprite" type="Sprite" parent="Background/Dust"]
+modulate = Color( 1, 1, 1, 0.156863 )
+material = SubResource( 1 )
+texture = SubResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1920, 1080 )
+
+[node name="Station" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1.66855, 59.4005 )
+
+[node name="Asteroid" parent="." instance=ExtResource( 4 )]
+position = Vector2( -155.145, 61.3854 )
+
+[node name="Asteroid2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -257.928, 108.772 )
+
+[node name="Asteroid3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -346.041, 127.012 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -51.2515, 1.98648 )
+MaxSpeed = 50.0
+Acceleration = 2.5
+Deceleration = 1.0
+
+[node name="Turret" parent="." instance=ExtResource( 5 )]
+position = Vector2( -114.383, 68.1728 )
+[connection signal="HealthChanged" from="Station" to="Station/Status" method="HealthChanged"]
