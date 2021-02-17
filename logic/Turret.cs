@@ -2,16 +2,12 @@ using Godot;
 using System;
 using System.Collections.Generic;
 
-public class Turret : RigidBody2D
+public class Turret : Tower
 {
     [Export]
     public readonly float AttackSpeed = 0.5f;
     [Export]
     public readonly float Damage = 2.0f;
-    [Export]
-    public float PowerUsage {get; set;} = 0.5f;
-
-    public bool IsPowered {get; set;}
 
     private List<Asteroid> _targets = new List<Asteroid>();
     private float _elapsedTime = 0.0f;
@@ -20,6 +16,8 @@ public class Turret : RigidBody2D
 
     public override void _Ready()
     {
+        base._Ready();
+
         _detection = GetNode<Area2D>("Detection");
         _laser = GetNode<Laser>("Laser");
 
