@@ -48,7 +48,7 @@ public class Player : KinematicBody2D
         if (eventMouseButton.Pressed && eventMouseButton.ButtonIndex == (int) ButtonList.Left) 
         {
             Node2D hit = _laser.Fire();
-            GD.Print(IsInstanceValid(hit) ? hit.Name : "no hit");
+            
             // Possibly redundant code, see Turret.cs for details
             if (hit is Asteroid asteroid)
                 asteroid.Health -= Damage;

@@ -11,7 +11,9 @@ radius = 104.463
 [sub_resource type="CircleShape2D" id=2]
 radius = 5.4667
 
-[node name="Turret" type="RigidBody2D"]
+[node name="Turret" type="RigidBody2D" groups=[
+"tower",
+]]
 linear_damp = 1.0
 script = ExtResource( 2 )
 

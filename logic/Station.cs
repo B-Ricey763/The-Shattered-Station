@@ -8,8 +8,6 @@ public class Station : Area2D
     public delegate void HealthChanged();
     [Export]
     public float MaxHealth = 100.0f;
-    [Export]
-    public float Power = 1.0f;
 
     private List<ITower> _towers = new List<ITower>();
 
@@ -33,28 +31,6 @@ public class Station : Area2D
         Health = MaxHealth;
     }
 
-    public override void _PhysicsProcess(float delta)
-    {
-        PowerTowers();
-    }
-
-    private void PowerTowers()
-    {
-        float availablePower = Power;
-        foreach (ITower tower in _towers)
-        {
-            if (availablePower - tower.PowerUsage > 0)
-            {
-                availablePower -= tower.PowerUsage;
-                tower.IsPowered = true;
-            }
-            else
-            {
-                tower.IsPowered = false;
-            }
-        }
-    }
-
     private void BodyEntered(Node body)
     {
         if (body is Asteroid asteroid)
@@ -68,30 +44,29 @@ public class Station : Area2D
 
     public void BodyEnteredPower(Node body)
     {
-        if (body is ITower tower)
-            AddTower(tower);
+        if (body.IsInGroup("tower"))
+            AddTower(body as RigidBody2D);
     }
 
     public void BodyExitedPower(Node body)
     {
-        if (body is ITower tower)
-            RemoveTower(tower);
+        if (body.IsInGroup("tower"))
+            RemoveTower(body);
     }
 
-    private void AddTower(ITower tower)
+    private void AddTower(RigidBody2D tower)
     {
         // The body is a tower, so we know it needs power
         _towers.Add(tower);
 
         // THIS IS TERRIBLE NEVER DO THIS AGAIN
-        Tether powerTether = (tower as Node2D).GetNode<Tether>("Tether");
+        Tether powerTether = tower.GetNode<Tether>("Tether");
         // MY EYES ARE BLEEDING SOMEONE HELP ME
         powerTether.Link(tower as Node2D, this);
     }
 
-    private void RemoveTower(ITower tower)
+    private void RemoveTower(RigidBody2D tower)
     {
-        tower.IsPowered = false;
         _towers.Remove(tower);
 
         Tether powerTether = (tower as Node2D).GetNode<Tether>("Tether");
