@@ -1,36 +1,30 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://sprites/turret_tower.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Tower.tscn" type="PackedScene" id=1]
 [ext_resource path="res://logic/Turret.cs" type="Script" id=2]
 [ext_resource path="res://scenes/Laser.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Tether.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sprites/turret_tower.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 104.463
+radius = 75.0
 
-[sub_resource type="CircleShape2D" id=2]
-radius = 5.4667
-
-[node name="Turret" type="RigidBody2D" groups=[
-"tower",
-]]
-linear_damp = 1.0
+[node name="Turret" instance=ExtResource( 1 )]
+gravity_scale = 0.0
+linear_damp = 5.0
 script = ExtResource( 2 )
 
-[node name="Detection" type="Area2D" parent="."]
+[node name="Health" parent="." index="0"]
+Max = 50.0
 
-[node name="Collider" type="CollisionShape2D" parent="Detection"]
+[node name="Detection" type="Area2D" parent="." index="2"]
+
+[node name="Collider" type="CollisionShape2D" parent="Detection" index="0"]
 shape = SubResource( 1 )
 
-[node name="Collider" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+[node name="Laser" parent="." index="5" instance=ExtResource( 3 )]
 
-[node name="Tether" parent="." instance=ExtResource( 4 )]
-
-[node name="Laser" parent="." instance=ExtResource( 3 )]
-
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" parent="." index="6"]
 rotation = 0.785398
-texture = ExtResource( 1 )
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="Detection" to="." method="BodyEntered"]
 [connection signal="body_exited" from="Detection" to="." method="BodyExited"]

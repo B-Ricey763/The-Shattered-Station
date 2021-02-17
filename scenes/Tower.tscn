@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/PowerRange.tscn" type="PackedScene" id=2]
+[ext_resource path="res://logic/Tower.cs" type="Script" id=3]
+[ext_resource path="res://scenes/Health.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.38429
+
+[node name="Tower" type="RigidBody2D"]
+script = ExtResource( 3 )
+
+[node name="Health" parent="." instance=ExtResource( 4 )]
+
+[node name="PowerRange" parent="." instance=ExtResource( 2 )]
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+[connection signal="body_entered" from="PowerRange" to="." method="OnPowerRangeBodyEntered"]
+[connection signal="body_exited" from="PowerRange" to="." method="OnPowerRangeBodyExited"]
