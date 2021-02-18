@@ -19,14 +19,14 @@ public abstract class Tower : RigidBody2D
     
     public void OnPowerRangeBodyEntered(Node node)
     {
-        if (node is Node2D n && n.IsInGroup("powered"))
-            Power(n);
+        if (n.IsInGroup("powered"))
+            Power((Node2D) n);
     }
 
     public void OnPowerRangeBodyExited(Node node)
     {
-        if (node is Node2D n && n.IsInGroup("powered"))
-            Unpower(n);       
+        if (n.IsInGroup("powered"))
+            Unpower((Node2D) n);       
     }
 
     public void Power(Node2D powerNode)
