@@ -51,7 +51,7 @@ public class Player : KinematicBody2D
             
             // Possibly redundant code, see Turret.cs for details
             if (hit is Asteroid asteroid)
-                asteroid.Health -= Damage;
+                asteroid.GetNode<Health>("Health").Value -= Damage;
         }
 
     }

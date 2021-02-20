@@ -11,7 +11,6 @@ public class Tether : Node
     public override void _Ready()
     {
         _line = GetNode<Line2D>("Line");
-        GD.Print(_line);
         SetProcess(false);
     }
 

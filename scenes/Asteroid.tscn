@@ -1,17 +1,30 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sprites/Meteor.png" type="Texture" id=1]
 [ext_resource path="res://logic/Asteroid.cs" type="Script" id=2]
+[ext_resource path="res://scenes/Health.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 6.89298
 
 [node name="Asteroid" type="RigidBody2D"]
 gravity_scale = 0.0
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 2 )
+
+[node name="Health" parent="." instance=ExtResource( 3 )]
+Max = 10.0
+
+[node name="Gui" parent="Health" index="0"]
+visible = false
 
 [node name="Collider" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="Died" from="Health" to="." method="OnDied"]
+
+[editable path="Health"]

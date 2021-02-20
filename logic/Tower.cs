@@ -61,7 +61,8 @@ public abstract class Tower : RigidBody2D
         if (_tethers.Count == 0)
         {
             IsPowered = false;
-            RemoveFromGroup("powered");
+            if (IsInGroup("powered"))
+                RemoveFromGroup("powered");
         }
     }
 
@@ -73,5 +74,10 @@ public abstract class Tower : RigidBody2D
                 return t;
         }
         return null;
+    }
+
+    public void OnDeath()
+    {
+        QueueFree();
     }
 }

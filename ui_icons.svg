@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="793.70081"
+   height="1122.5197"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="ui_icons.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#303030"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="529.78333"
+     inkscape:cy="1129.6415"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     showborder="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1417"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g1009"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\settings.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:0;fill:#ffffff;stroke:#00ff00;stroke-width:4.32336;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect907"
+         width="131.1433"
+         height="131.1433"
+         x="31.786812"
+         y="325.8902" />
+      <path
+         id="path911"
+         style="opacity:1;fill:#ffffff;stroke:none;stroke-width:92.8554;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 337.01562 1252.4746 C 327.76589 1252.4746 320.32031 1259.9201 320.32031 1269.1699 L 320.32031 1287.7051 A 188.09041 188.09041 0 0 0 264.49805 1310.8262 L 251.39258 1297.7207 C 244.85202 1291.1801 234.31989 1291.1801 227.7793 1297.7207 L 190.39258 1335.1094 C 183.85202 1341.6499 183.85202 1352.1801 190.39258 1358.7207 L 203.49805 1371.8262 A 188.09041 188.09041 0 0 0 180.37695 1427.6484 L 161.8418 1427.6484 C 152.59203 1427.6484 145.14453 1435.096 145.14453 1444.3457 L 145.14453 1497.2188 C 145.14453 1506.4682 152.59203 1513.916 161.8418 1513.916 L 180.37695 1513.916 A 188.09041 188.09041 0 0 0 203.49805 1569.7383 L 190.39258 1582.8438 C 183.85202 1589.384 183.85199 1599.9145 190.39258 1606.4551 L 227.7793 1643.8438 C 234.31989 1650.384 244.85202 1650.384 251.39258 1643.8438 L 264.49805 1630.7383 A 188.09041 188.09041 0 0 0 320.32031 1653.8594 L 320.32031 1672.3945 C 320.32031 1681.6443 327.76589 1689.0898 337.01562 1689.0898 L 389.89062 1689.0898 C 399.14038 1689.0898 406.58594 1681.6443 406.58594 1672.3945 L 406.58594 1653.8594 A 188.09041 188.09041 0 0 0 462.4082 1630.7383 L 475.51367 1643.8438 C 482.05426 1650.3841 492.58639 1650.3841 499.12695 1643.8438 L 536.51367 1606.4551 C 543.05426 1599.9145 543.05426 1589.3841 536.51367 1582.8438 L 523.4082 1569.7383 A 188.09041 188.09041 0 0 0 546.5293 1513.916 L 565.06445 1513.916 C 574.31424 1513.916 581.76172 1506.4682 581.76172 1497.2188 L 581.76172 1444.3457 C 581.76172 1435.096 574.31424 1427.6484 565.06445 1427.6484 L 546.5293 1427.6484 A 188.09041 188.09041 0 0 0 523.4082 1371.8262 L 536.51367 1358.7207 C 543.05423 1352.1801 543.05426 1341.65 536.51367 1335.1094 L 499.12695 1297.7207 C 492.58636 1291.1801 482.05423 1291.1801 475.51367 1297.7207 L 462.4082 1310.8262 A 188.09041 188.09041 0 0 0 406.58594 1287.7051 L 406.58594 1269.1699 C 406.58594 1259.9201 399.14038 1252.4746 389.89062 1252.4746 L 337.01562 1252.4746 z M 363.45312 1350.5742 A 120.20816 120.20816 0 0 1 483.66016 1470.7812 A 120.20816 120.20816 0 0 1 363.45312 1590.9902 A 120.20816 120.20816 0 0 1 243.24414 1470.7812 A 120.20816 120.20816 0 0 1 363.45312 1350.5742 z "
+         transform="scale(0.26458333)" />
+    </g>
+    <rect
+       style="opacity:0;fill:#ffffff;stroke:#00ff00;stroke-width:4.32336;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect841"
+       width="131.1433"
+       height="131.1433"
+       x="-99.356483"
+       y="179.40562"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffffff;stroke:#ffffff;stroke-width:22.8253;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path835"
+       sodipodi:sides="3"
+       sodipodi:cx="-40.474014"
+       sodipodi:cy="257.88742"
+       sodipodi:r1="49.98103"
+       sodipodi:r2="24.990515"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.5070152,257.88742 -74.9715442,43.28484 0,-86.56968 z"
+       inkscape:transform-center-x="-10.189664"
+       transform="matrix(0.81548244,0,0,0.88482546,-9.4266512,14.360794)"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\play.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g997"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\pause.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:0;fill:#ffffff;stroke:#00ff00;stroke-width:4.32336;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect843"
+         width="131.1433"
+         height="131.1433"
+         x="31.786812"
+         y="170.05119" />
+      <g
+         id="g955"
+         transform="translate(10.442836,-22.610457)">
+        <rect
+           style="opacity:1;fill:#ffffff;stroke:#ffffff;stroke-width:10.2929;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect847"
+           width="17.979284"
+           height="88.183098"
+           x="56.891605"
+           y="214.14175" />
+        <rect
+           style="opacity:1;fill:#ffffff;stroke:#ffffff;stroke-width:10.2929;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect851"
+           width="17.979284"
+           height="88.183098"
+           x="98.960358"
+           y="214.14175" />
+      </g>
+    </g>
+    <g
+       id="g991"
+       transform="translate(0,-8.2319014)"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\quit.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:0;fill:#ffffff;stroke:#00ff00;stroke-width:4.32336;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect845"
+         width="131.1433"
+         height="131.1433"
+         x="162.93011"
+         y="194.7469" />
+      <g
+         id="g959">
+        <path
+           id="path853"
+           style="opacity:1;fill:#ffffff;stroke:none;stroke-width:92.8554;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 807.16016,830.16406 A 158.99999,158.99999 0 0 0 692,983 158.99999,158.99999 0 0 0 851,1142 158.99999,158.99999 0 0 0 1010,983 158.99999,158.99999 0 0 0 894.83984,830.16406 V 882.6582 A 109.50252,109.50252 0 0 1 960.50195,983 109.50252,109.50252 0 0 1 851,1092.502 109.50252,109.50252 0 0 1 741.49805,983 109.50252,109.50252 0 0 1 807.16016,882.65625 Z"
+           transform="scale(0.26458333)" />
+        <rect
+           style="opacity:1;fill:#ffffff;stroke:#ffffff;stroke-width:8.63097;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect859"
+           width="4.9769268"
+           height="41.548691"
+           x="222.67195"
+           y="210.69151" />
+      </g>
+    </g>
+    <g
+       id="g1005"
+       transform="translate(-20.205576)"
+       inkscape:export-filename="D:\Godot\The Shattered Station\ui\restart.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="opacity:0;fill:#ffffff;stroke:#00ff00;stroke-width:4.32336;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect878"
+         width="131.1433"
+         height="131.1433"
+         x="-99.356483"
+         y="325.8902" />
+      <path
+         id="path880"
+         style="opacity:1;fill:#ffffff;stroke:none;stroke-width:64.3551;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -150.55859,1250.3828 -107.44922,67.3106 107.44922,67.3105 v -44.0898 a 139.30005,139.30005 0 0 1 16.20898,-0.9473 A 139.30005,139.30005 0 0 1 4.9492188,1479.2676 139.30005,139.30005 0 0 1 -134.34961,1618.5684 139.30005,139.30005 0 0 1 -273.65039,1479.2676 139.30005,139.30005 0 0 1 -272.81055,1464 H -331.75 a 197.98991,197.98991 0 0 0 -0.58984,15.2676 197.98991,197.98991 0 0 0 197.99023,197.9902 197.98991,197.98991 0 0 0 197.988282,-197.9902 197.98991,197.98991 0 0 0 -197.988282,-197.9903 197.98991,197.98991 0 0 0 -16.20898,0.6641 z"
+         transform="scale(0.26458333)" />
+    </g>
+  </g>
+</svg>

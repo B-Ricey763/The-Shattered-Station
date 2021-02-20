@@ -4,27 +4,20 @@
 [ext_resource path="res://logic/Station.cs" type="Script" id=2]
 [ext_resource path="res://scenes/Health.tscn" type="PackedScene" id=3]
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CircleShape2D" id=1]
 radius = 8.26681
 
-[node name="Station" type="Area2D"]
-gravity_vec = Vector2( 0, 0 )
-gravity = 0.0
-script = ExtResource( 2 )
-
-[node name="Detection" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
-
-[node name="Body" type="StaticBody2D" parent="." groups=[
+[node name="Station" type="StaticBody2D" groups=[
+"damageable",
 "powered",
 ]]
-
-[node name="Collider" type="CollisionShape2D" parent="Body"]
-shape = SubResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Health" parent="." instance=ExtResource( 3 )]
 Max = 100.0
-[connection signal="body_entered" from="." to="." method="BodyEntered"]
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )

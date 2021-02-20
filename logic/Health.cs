@@ -32,4 +32,9 @@ public class Health : Node2D
         _bar = GetNode<ProgressBar>("Gui/Container/HealthBar");
         Value = Max;
     }
+
+    public override void _Process(float delta)
+    {
+        GlobalRotationDegrees = 0;
+    }
 }

@@ -42,17 +42,20 @@ public class Turret : Tower
         Asteroid currentTarget = _targets[0];
 
         _elapsedTime += delta;
-        if (_elapsedTime > AttackSpeed && IsPowered)
-        {
-            // Reset our time variable
-            _elapsedTime = 0;
+        if (IsPowered) {
+            if (_elapsedTime > AttackSpeed)
+            {
+                // Reset our time variable
+                _elapsedTime = 0;
 
-            Node2D hit = _laser.Fire();
-            
-            if (hit is Asteroid asteroid)
-                asteroid.Health -= Damage;       
-        } 
-        LookAt(currentTarget.GlobalPosition);
+                Node2D hit = _laser.Fire();
+                
+                if (hit is Asteroid asteroid)
+                    asteroid.GetNode<Health>("Health").Value -= Damage;       
+            } 
+            // TODO: Make it not lookat, but based on physics
+            LookAt(currentTarget.GlobalPosition);
+        }
     }
 
     public void BodyEntered(Node body)

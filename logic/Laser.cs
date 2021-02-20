@@ -6,7 +6,7 @@ public class Laser : RayCast2D
     [Export]
     public readonly float VisualDuration = 0.1f;
     [Export]
-    public readonly float Range = 100.0f;
+    public readonly float Range = 1000.0f;
 
     private Line2D _line;
     private Timer _timer;
