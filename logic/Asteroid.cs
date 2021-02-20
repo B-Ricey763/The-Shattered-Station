@@ -3,14 +3,20 @@ using System;
 
 public class Asteroid : RigidBody2D
 {
-    [Export]
-    public float TargetingSpeed = 10.0f;
+    public static float TargetingSpeed = 10.0f;
+    
     [Export]
     public float Damage = 10.0f;
 
     public Node2D Target {get; set;}
 
     private Random _rand = new Random();
+    private Globals _globals;
+
+    public override void _Ready()
+    {
+        _globals = GetNode<Globals>("/root/Globals");
+    }
 
     public override void _IntegrateForces(Physics2DDirectBodyState state)
     {
@@ -36,6 +42,10 @@ public class Asteroid : RigidBody2D
 
     public void OnDied()
     {
+        // Add the asteroid destroyed to it
+        _globals.AsteroidsDestroyed++;
+
+        // KYS
         QueueFree();
     }
 }

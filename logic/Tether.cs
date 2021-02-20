@@ -18,13 +18,13 @@ public class Tether : Node
     {
         for (int i = 0; i < Nodes.Length; i++)
         {
-            _line.SetPointPosition(i, Nodes[i].GlobalPosition);
+            if (IsInstanceValid(Nodes[i]))
+                _line.SetPointPosition(i, Nodes[i].GlobalPosition);
         }
     }
 
     public void Link(params Node2D[] nodes)
     {
-        GD.Print(_line);
         SetProcess(true);
         _line.Show();
 

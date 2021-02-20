@@ -17,6 +17,10 @@ _global_script_class_icons={
 
 config/name="The Shattered Station"
 
+[autoload]
+
+Globals="*res://logic/Globals.cs"
+
 [input]
 
 movement_up={

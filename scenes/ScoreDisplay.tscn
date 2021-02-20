@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://logic/ScoreDisplay.cs" type="Script" id=1]
+[ext_resource path="res://Gui.theme" type="Theme" id=2]
+[ext_resource path="res://RobotoCondensed-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="ScoreDisplay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 69.0
+margin_bottom = 39.0
+theme = ExtResource( 2 )
+custom_constants/margin_left = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreDisplay" type="Label" parent="MarginContainer"]
+margin_left = 5.0
+margin_right = 179.0
+margin_bottom = 76.0
+theme = ExtResource( 2 )
+custom_fonts/font = SubResource( 1 )
+text = "Score: "
+script = ExtResource( 1 )
