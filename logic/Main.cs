@@ -34,6 +34,8 @@ public class Main : Node2D
         _towerTimer = GetNode<Timer>("TowerSpawnTimer");
         _station = GetNode<Station>("Station");
 
+        // Load and reset globals
+        _globals.AsteroidsDestroyed = 0;
         _globals.Load();
     }
 

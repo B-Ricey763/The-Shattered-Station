@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Station.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,14 @@
 [ext_resource path="res://scenes/ScoreDisplay.tscn" type="PackedScene" id=4]
 [ext_resource path="res://towers/Turret.tscn" type="PackedScene" id=5]
 [ext_resource path="res://logic/Main.cs" type="Script" id=6]
+[ext_resource path="res://PauseMenu.cs" type="Script" id=7]
+[ext_resource path="res://RobotoCondensed-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://ui/settings.png" type="Texture" id=9]
+[ext_resource path="res://ui/pause.png" type="Texture" id=10]
+[ext_resource path="res://ui/quit.png" type="Texture" id=11]
+[ext_resource path="res://ui/play.png" type="Texture" id=12]
+[ext_resource path="res://buttonfont.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Gui.theme" type="Theme" id=14]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -14,6 +22,11 @@
 [sub_resource type="NoiseTexture" id=3]
 seamless = true
 noise = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 128
+use_filter = true
+font_data = ExtResource( 8 )
 
 [node name="Main" type="Node2D"]
 position = Vector2( 293.997, 139.871 )
@@ -64,5 +77,130 @@ autostart = true
 [node name="Guis" type="CanvasLayer" parent="."]
 
 [node name="ScoreDisplay" parent="Guis" instance=ExtResource( 4 )]
+
+[node name="PauseMenu" type="Control" parent="Guis"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Guis/PauseMenu"]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Guis/PauseMenu/MarginContainer"]
+modulate = Color( 1, 1, 1, 0.188235 )
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Guis/PauseMenu/MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Label" type="Label" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2"]
+margin_right = 1024.0
+margin_bottom = 151.0
+custom_fonts/font = SubResource( 4 )
+text = "Paused"
+align = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2"]
+margin_top = 155.0
+margin_right = 1024.0
+margin_bottom = 237.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer2"]
+margin_left = 337.0
+margin_right = 687.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 350, 64 )
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+text = "Resume"
+icon = ExtResource( 12 )
+flat = true
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer4" type="CenterContainer" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2"]
+margin_top = 241.0
+margin_right = 1024.0
+margin_bottom = 323.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer4"]
+margin_left = 337.0
+margin_right = 687.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 350, 0 )
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+text = "Main Menu"
+icon = ExtResource( 9 )
+flat = true
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer3" type="CenterContainer" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2"]
+margin_top = 327.0
+margin_right = 1024.0
+margin_bottom = 409.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer3"]
+margin_left = 337.0
+margin_right = 687.0
+margin_bottom = 82.0
+rect_min_size = Vector2( 350, 0 )
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+text = "Quit"
+icon = ExtResource( 11 )
+flat = true
+align = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Guis/PauseMenu"]
+pause_mode = 2
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -65.0596
+margin_top = 1.05951
+margin_right = -1.05957
+margin_bottom = 65.0595
+icon = ExtResource( 10 )
+flat = true
+expand_icon = true
 [connection signal="timeout" from="AsteroidSpawnTimer" to="." method="SpawnAsteroid"]
 [connection signal="timeout" from="TowerSpawnTimer" to="." method="SpawnTower"]
+[connection signal="pressed" from="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer2/Button" to="Guis/PauseMenu" method="TogglePause"]
+[connection signal="pressed" from="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer4/Button" to="Guis/PauseMenu" method="OnMenu"]
+[connection signal="pressed" from="Guis/PauseMenu/MarginContainer/VBoxContainer2/CenterContainer3/Button" to="Guis/PauseMenu" method="OnQuit"]
+[connection signal="pressed" from="Guis/PauseMenu/Button" to="Guis/PauseMenu" method="TogglePause"]

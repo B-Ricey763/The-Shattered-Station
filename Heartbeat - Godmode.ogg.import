@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Heartbeat - Godmode.ogg-268131ce45c5850d42c92006c33489a0.oggstr"
+
+[deps]
+
+source_file="res://Heartbeat - Godmode.ogg"
+dest_files=[ "res://.import/Heartbeat - Godmode.ogg-268131ce45c5850d42c92006c33489a0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,272 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://sprites/Background.png" type="Texture" id=1]
+[ext_resource path="res://RobotoCondensed-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://sprites/Meteor.png" type="Texture" id=3]
+[ext_resource path="res://sprites/turret_tower.png" type="Texture" id=4]
+[ext_resource path="res://ui/play.png" type="Texture" id=5]
+[ext_resource path="res://ui/settings.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Ship.png" type="Texture" id=7]
+[ext_resource path="res://ui/quit.png" type="Texture" id=8]
+[ext_resource path="res://sprites/shattered_station.png" type="Texture" id=9]
+[ext_resource path="res://Gui.theme" type="Theme" id=10]
+[ext_resource path="res://ui_logic/Menu.cs" type="Script" id=11]
+[ext_resource path="res://scenes/Main.tscn" type="PackedScene" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Main = ExtResource( 12 )
+HighscorePath = NodePath("CenterContainer/VBoxContainer/Highscore")
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 234.0
+margin_top = 182.0
+margin_right = 790.0
+margin_bottom = 417.0
+
+[node name="Title" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 556.0
+margin_bottom = 76.0
+theme = ExtResource( 10 )
+custom_fonts/font = SubResource( 1 )
+text = "Shattered Station"
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 80.0
+margin_right = 556.0
+margin_bottom = 99.0
+theme = ExtResource( 10 )
+custom_fonts/font = SubResource( 2 )
+text = "Highscore: 0"
+valign = 1
+uppercase = true
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 103.0
+margin_right = 556.0
+margin_bottom = 167.0
+rect_min_size = Vector2( 150, 64 )
+theme = ExtResource( 10 )
+text = "Play"
+icon = ExtResource( 5 )
+flat = true
+align = 0
+expand_icon = true
+
+[node name="Settings" type="Button" parent="CenterContainer/VBoxContainer"]
+visible = false
+margin_top = 171.0
+margin_right = 556.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 150, 64 )
+theme = ExtResource( 10 )
+text = "Settings"
+icon = ExtResource( 6 )
+flat = true
+align = 0
+expand_icon = true
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 171.0
+margin_right = 556.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 150, 64 )
+theme = ExtResource( 10 )
+text = "Quit"
+icon = ExtResource( 8 )
+flat = true
+align = 0
+expand_icon = true
+
+[node name="Art" type="Control" parent="CenterContainer"]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -64.3669
+margin_top = -43.6028
+margin_right = 215.633
+margin_bottom = 211.397
+texture = ExtResource( 9 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station2" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -424.018
+margin_top = -95.5438
+margin_right = -305.018
+margin_bottom = -8.54382
+rect_rotation = -25.1428
+texture = ExtResource( 4 )
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station3" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 324.043
+margin_top = -137.684
+margin_right = 435.043
+margin_bottom = -19.6838
+texture = ExtResource( 7 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station4" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 372.9
+margin_top = 163.753
+margin_right = 439.9
+margin_bottom = 219.753
+rect_rotation = 64.9799
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station5" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 79.1661
+margin_top = -200.145
+margin_right = 146.166
+margin_bottom = -144.145
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station8" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -251.433
+margin_top = -245.334
+margin_right = -184.433
+margin_bottom = -189.334
+rect_rotation = 39.7571
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station9" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -103.972
+margin_top = 204.78
+margin_right = -36.9718
+margin_bottom = 260.78
+rect_rotation = 39.7571
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station6" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -435.166
+margin_top = 71.5892
+margin_right = -368.166
+margin_bottom = 127.589
+rect_rotation = 63.1608
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Station7" type="TextureRect" parent="CenterContainer/Art"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 324.737
+margin_top = 78.1302
+margin_right = 391.737
+margin_bottom = 134.13
+rect_rotation = -181.933
+texture = ExtResource( 3 )
+stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="OnPlay"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Settings" to="." method="OnSettings"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="OnQuit"]

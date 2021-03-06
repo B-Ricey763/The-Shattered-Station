@@ -21,3 +21,4 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+[connection signal="Died" from="Health" to="." method="OnDied"]
